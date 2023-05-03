@@ -3,7 +3,6 @@ from .models import Serie
 
 
 class SerieSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Serie
         fields = [
