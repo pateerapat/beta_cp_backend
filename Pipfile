@@ -23,6 +23,7 @@ django-rest-knox = "*"
 django-cors-headers = "*"
 django-multiselectfield = "*"
 numpy = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"
