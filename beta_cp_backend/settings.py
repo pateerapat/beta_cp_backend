@@ -76,12 +76,12 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
-    'https://front.bluemix.net',
+    'https://betacpbackend-production.up.railway.app',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',
-    'https://front.bluemix.net',
+    'https://betacpbackend-production.up.railway.app',
 ]
 
 ROOT_URLCONF = 'beta_cp_backend.urls'
