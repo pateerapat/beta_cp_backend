@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '*',
+    'https://betacpbackend-production.up.railway.app',
 ]
 
 
