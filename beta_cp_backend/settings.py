@@ -79,10 +79,12 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
+    'https://front.bluemix.net',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',
+    'https://front.bluemix.net',
 ]
 
 ROOT_URLCONF = 'beta_cp_backend.urls'
