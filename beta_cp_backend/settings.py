@@ -76,10 +76,12 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
+    'nanazaki.pythonanywhere.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',
+    'nanazaki.pythonanywhere.com',
 ]
 
 ROOT_URLCONF = 'beta_cp_backend.urls'
