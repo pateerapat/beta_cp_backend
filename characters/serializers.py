@@ -9,6 +9,4 @@ class CharacterSerializer(serializers.ModelSerializer):
             "id",
             "serie",
             "name",
-            "rating",
-            "image",
         ]

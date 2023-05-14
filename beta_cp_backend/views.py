@@ -83,7 +83,9 @@ class UserAPI(generics.RetrieveAPIView):
         knox_token = AuthToken.objects.filter(token_key=token[:CONSTANTS.TOKEN_KEY_LENGTH]).first()
         if knox_token:
             return Response({
+                "user_id": knox_token.user.id,
                 "username": knox_token.user.username,
+                "moonstone": knox_token.user.moonstone,
             })
         return Response({
             "errors": "Your session has been expired, Please login again."

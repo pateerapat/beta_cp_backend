@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,11 +43,16 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'corsheaders',
+    'multiselectfield',
 
     # Custom Application.
     'main',
     'characters',
     'series',
+    'beta_user',
+    'character_card',
+    'card_pack',
+    'notification',
 ]
 
 REST_FRAMEWORK = {
@@ -69,6 +75,10 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8080',
+]
+
+CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',
 ]
 
@@ -122,6 +132,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'beta_user.BetaUser'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -139,6 +151,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

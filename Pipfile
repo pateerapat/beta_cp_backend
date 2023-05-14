@@ -18,6 +18,11 @@ django-js-routes = "*"
 text-unidecode = "*"
 jsonschema = "*"
 django = "*"
+django-rest-framework = "*"
+django-rest-knox = "*"
+django-cors-headers = "*"
+django-multiselectfield = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.8"

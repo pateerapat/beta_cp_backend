@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User
+from beta_user.models import BetaUser
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = BetaUser
         fields = [
             "id",
             "username",
@@ -15,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = BetaUser
         fields = [
             "id",
             "username",
@@ -43,7 +43,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         return validator
 
     def create(self, validated_data):
-        user = User.objects.create_user(
+        user = BetaUser.objects.create_user(
             validated_data["username"],
             validated_data["email"],
             validated_data["password"],
