@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-a&^n$*=pccj^$8g$yl#z&62b3^ssjdyff7sbw_80@xe)53@@=q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'nanazaki.pythonanywhere.com',
+]
 
 
 # Application definition
@@ -76,12 +78,10 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
-    'nanazaki.pythonanywhere.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',
-    'nanazaki.pythonanywhere.com',
 ]
 
 ROOT_URLCONF = 'beta_cp_backend.urls'
