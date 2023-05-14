@@ -86,7 +86,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://betacpbackend-production.up.railway.app',
 ]
 
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 ROOT_URLCONF = 'beta_cp_backend.urls'
 
