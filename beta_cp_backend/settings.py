@@ -58,8 +58,8 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
         'knox.auth.TokenAuthentication',
     ],
 }
@@ -86,7 +86,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://betacpbackend-production.up.railway.app',
 ]
 
-SESSION_COOKIE_DOMAIN = 'https://betacpbackend-production.up.railway.app'
+# SESSION_COOKIE_DOMAIN = 'https://betacpbackend-production.up.railway.app'
 
 ROOT_URLCONF = 'beta_cp_backend.urls'
 
