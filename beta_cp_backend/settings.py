@@ -79,11 +79,13 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
     'https://betacpbackend-production.up.railway.app',
+    'https://clean-bear-jumpsuit.cyclic.app/',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',
     'https://betacpbackend-production.up.railway.app',
+    'https://clean-bear-jumpsuit.cyclic.app/',
 ]
 
 # SESSION_COOKIE_DOMAIN = 'https://betacpbackend-production.up.railway.app'
