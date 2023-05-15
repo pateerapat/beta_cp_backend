@@ -37,9 +37,13 @@ urlpatterns = [
         name="login",
     ),
     path(
-        "api/user/<int:pk>",
+        "api/user/",
         UserAPI.as_view(),
         name="user",
+    ),
+    path(
+        "api/user/<int:pk>",
+        UserAPI.as_view(),
     ),
     path(
         "api/logout/",
