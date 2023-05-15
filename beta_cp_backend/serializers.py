@@ -24,6 +24,7 @@ class RegisterSerializer(serializers.ModelSerializer):
             "username",
             "email",
             "password",
+            "is_superuser",
         ]
         extra_kwargs = {
             "password": {
@@ -51,4 +52,9 @@ class RegisterSerializer(serializers.ModelSerializer):
             validated_data["email"],
             validated_data["password"],
         )
+        if validated_data["is_superuser"] == True:
+            user.is_active = True
+            user.is_superuser = True
+            user.is_staff = True
+            user.save()
         return user
