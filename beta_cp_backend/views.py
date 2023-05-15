@@ -11,6 +11,8 @@ from knox.views import LoginView as KnoxLoginView
 from knox.models import AuthToken
 from knox.settings import CONSTANTS
 
+from beta_user.models import BetaUser
+
 from .serializers import (
     UserSerializer,
     RegisterSerializer,
@@ -76,6 +78,7 @@ class LoginAPI(KnoxLoginView):
 
 
 class UserAPI(generics.RetrieveAPIView):
+    queryset = BetaUser.objects.all()
     serializer_class = UserSerializer
 
     def post(self, request, *args, **kwargs):

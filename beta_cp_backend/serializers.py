@@ -7,9 +7,12 @@ class UserSerializer(serializers.ModelSerializer):
         model = BetaUser
         fields = [
             "id",
-            "username",
             "email",
+            "username",
+            "password",
             "is_staff",
+            "is_active",
+            "is_superuser",
         ]
 
 

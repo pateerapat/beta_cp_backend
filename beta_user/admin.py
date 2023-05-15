@@ -7,3 +7,4 @@ from .models import (
 )
 
 admin.site.register([BetaUser, UserCharacterCard, UserCardPack])
+
